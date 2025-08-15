@@ -87,6 +87,25 @@ import streamlit as st
 import pickle
 import pandas as pd
 import requests
+import gdown
+import pickle
+import os
+
+# Direct download URL from Step 2
+
+
+# url = "https://drive.google.com/file/d/1g40pNLMXVbNy97ZkLrtvB0JMXSTE-gSg/view?usp=drive_link"
+# url = "https://drive.google.com/uc?id=1g40pNLMXVbNy97ZkLrtvB0JMXSTE-gSg"
+# output = "similarity.pkl"
+
+# # Download only if not already present
+# if not os.path.exists(output):
+#     gdown.download(url, output, quiet=False)
+
+# # Load the file
+# with open(output, "rb") as f:
+#     similarity = pickle.load(f)
+
 
 # --- PAGE CONFIGURATION ---
 st.set_page_config(
@@ -233,7 +252,17 @@ def fetch_poster(movie_id):
 
 # Load the DataFrame and similarity matrix
 movies = pickle.load(open('movie.pkl', 'rb'))
-similarity = pickle.load(open('similarity.pkl', 'rb'))
+# similarity = pickle.load(open('similarity.pkl', 'rb'))
+url = "https://drive.google.com/uc?id=1g40pNLMXVbNy97ZkLrtvB0JMXSTE-gSg"
+output = "similarity.pkl"
+
+# Download only if not already present
+if not os.path.exists(output):
+    gdown.download(url, output, quiet=False)
+
+# Load the file
+with open(output, "rb") as f:
+    similarity = pickle.load(f)
 
 # Function to recommend movies
 def recommend(selected_movie):
@@ -268,6 +297,7 @@ if st.button('Show Recommend'):
     for col, name, poster in zip(cols, names, posters):
         col.markdown(f"<p class='card-title'>{name}</p>", unsafe_allow_html=True)
         col.image(poster)
+
 
 
 
