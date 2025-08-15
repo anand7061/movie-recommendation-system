@@ -41,7 +41,7 @@ You can try the project live here:
 
 2. **Install dependencies**
    ```bash
-pip install -r requirements.txt
+   pip install -r requirements.txt
 
 
 3. **Run the Streamlit app**
@@ -65,6 +65,7 @@ Deployed online for global access
 📜 License
 
 This project is open-source and available under the MIT License.
+
 
 
 
