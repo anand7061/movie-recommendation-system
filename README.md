@@ -29,7 +29,7 @@ You can try the project live here:
 
 ## 📷 Screenshot
 ![Movie Recommendation System Screenshot](https://github.com/anand7061/movie-recommendation-system/blob/main/Screenshot%202025-08-15%20164500.png)  
-*(Replace `screenshot.png` with your actual screenshot file in the repo.)*
+
 
 ---
 
@@ -41,12 +41,13 @@ You can try the project live here:
 
 2. **Install dependencies**
 
-pip install -r requirements.txt
+```pip install -r requirements.txt
 
 
 3. **Run the Streamlit app**
 
-streamlit run app.py
+```streamlit run app.py
+
 
 
 4. **Open the provided localhost link in your browser.**
@@ -64,4 +65,5 @@ Deployed online for global access
 📜 License
 
 This project is open-source and available under the MIT License.
+
 
