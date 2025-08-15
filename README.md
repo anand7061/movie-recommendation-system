@@ -40,14 +40,12 @@ You can try the project live here:
    cd movie-recommendation-system
 
 2. **Install dependencies**
-
-```bash
+   ```bash
 pip install -r requirements.txt
 
 
 3. **Run the Streamlit app**
-
-```bash
+   ```bash
    streamlit run app.py
 
 
@@ -67,6 +65,7 @@ Deployed online for global access
 📜 License
 
 This project is open-source and available under the MIT License.
+
 
 
 
